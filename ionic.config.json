@@ -1,0 +1,8 @@
+{
+  "name": "Megahack",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "bbaec4bf"
+}
