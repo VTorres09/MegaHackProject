@@ -80,10 +80,13 @@
         </div>
         <div class="col-md-6 col-lg-5 mb-5 mb-md-0">
           <h1>Pode fazer seu Login!</h1>
-          <input class="input" placeholder="Digite seu login">
-          <input class="input" placeholder="Digite sua senha">
-          <a class="button button-hero mt-4" href="logged.html">Login</a> 
+          <form name="login">
+            <input class="input" placeholder="Digite seu login" name="email">
+            <input class="input" type="password" placeholder="Digite sua senha" name="senha">
+            <input class="button button-hero mt-4" type="button" value="login" onclick="check(this.form)"/> 
+          </form>
         </div>
+
         <div id="righter">
             <p>Ainda não é um membro? Venha fazer parte da nossa plataforma:</p>
             <a class="button button-hero mt-4" href="cadastro.html">Criar</a>
@@ -105,3 +108,13 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+
+<script language="javascript">
+    function check(form){
+        if(form.email.value == "admin" && form.senha.value == "admin"){
+          window.open('logged.html')
+        } else {
+          alert('O email ou senha estao incorretos!')
+        }
+      }
+</script>
