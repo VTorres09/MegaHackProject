@@ -35,24 +35,8 @@
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav justify-content-end">
               <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
-              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li> 
-              <li class="nav-item"><a class="nav-link" href="package.html">Packages</a>
-              <li class="nav-item submenu dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">Pages</a>
-                <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="amentities.html">Amentities</a>                 
-                </ul>
-							</li>
-
-              <li class="nav-item submenu dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">Blog</a>
-                <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="blog.html">Blog Single</a></li>
-                  <li class="nav-item"><a class="nav-link" href="blog-details.html">Blog Details</a></li>
-                </ul>
-							</li>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
               <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
 
@@ -80,10 +64,13 @@
         </div>
         <div class="col-md-6 col-lg-5 mb-5 mb-md-0">
           <h1>Pode fazer seu Login!</h1>
-          <input class="input" placeholder="Digite seu login">
-          <input class="input" placeholder="Digite sua senha">
-          <a class="button button-hero mt-4" href="logged.html">Login</a> 
+          <form name="login">
+            <input class="input" placeholder="Digite seu login" name="email">
+            <input class="input" type="password" placeholder="Digite sua senha" name="senha">
+            <input class="button button-hero mt-4" type="button" value="login" onclick="check(this.form)"/> 
+          </form>
         </div>
+
         <div id="righter">
             <p>Ainda não é um membro? Venha fazer parte da nossa plataforma:</p>
             <a class="button button-hero mt-4" href="cadastro.html">Criar</a>
@@ -105,3 +92,13 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+
+<script language="javascript">
+    function check(form){
+        if(form.email.value == "admin" && form.senha.value == "admin"){
+          window.open('logged.html')
+        } else {
+          alert('O email ou senha estao incorretos!')
+        }
+      }
+</script>
